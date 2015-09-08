@@ -4,6 +4,7 @@ MAINTAINER Manel Martinez <manel@nixelsolutions.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN add-apt-repository ppa:niedbalski/memcached-repcached
 RUN echo "deb http://ppa.launchpad.net/niedbalski/memcached-repcached/ubuntu trusty main" >> /etc/apt/sources.list.d/memcached.list
 
 RUN apt-get update && \
