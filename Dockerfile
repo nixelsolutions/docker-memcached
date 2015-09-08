@@ -12,7 +12,8 @@ RUN echo "deb http://ppa.launchpad.net/niedbalski/memcached-repcached/ubuntu tru
 RUN apt-get update && \
     apt-get -y install memcached
 
-ENV MEMCACHED_PEER **ChangeMe**
+ENV MEMCACHED_PEERS **ChangeMe**
+ENV MY_IP **ChangeMe**
 ENV MEMCACHED_PORT 11211
 ENV MEMCACHED_MAX_MEM 64
 ENV MEMCACHED_MAX_CONN 1024
