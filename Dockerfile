@@ -4,9 +4,11 @@ MAINTAINER Manel Martinez <manel@nixelsolutions.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN apt-get update && \
+    apt-get install -y python-software-properties software-properties-common supervisor 
 RUN add-apt-repository ppa:niedbalski/memcached-repcached
 RUN apt-get update && \
-    apt-get install -y python-software-properties software-properties-common supervisor memcached
+    apt-get install -y memcached
 
 ENV MEMCACHED_PEERS **ChangeMe**
 ENV MY_IP **ChangeMe**
